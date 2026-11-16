@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>POMO - Focus Timer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="one.css">
+
+</head>
+
+<body>
+
+    <!-- Main Application -->
+    <div class="app-container">
+
+        <!-- Header -->
+        <header class="navbar">
+
+            <!-- Logo -->
+            <div class="logo">
+                <i class="fa-solid fa-clock"></i>
+                <span>POMO</span>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="nav-links">
+
+                <button class="nav-btn" id="boardsBtn">
+                    <i class="fa-solid fa-table-columns"></i>
+                    Boards
+                </button>
+
+                <button class="nav-btn active" id="pomodoroBtn">
+                    <i class="fa-regular fa-clock"></i>
+                    Pomodoro
+                </button>
+
+                <button class="nav-btn" id="settingsBtn">
+                    <i class="fa-solid fa-gear"></i>
+                    Settings
+                </button>
+
+            </nav>
+
+            <!-- Subscription Badge -->
+            <div class="subscription-badge">
+                <i class="fa-solid fa-crown"></i>
+                Focus Mode
+            </div>
+
+        </header>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Session Tabs -->
+            <section class="session-tabs">
+
+                <button class="session-tab active" id="focusTab">
+                    <i class="fa-solid fa-brain"></i>
+                    Focus
+                </button>
+
+                <button class="session-tab" id="shortBreakTab">
+                    <i class="fa-solid fa-mug-hot"></i>
+                    Short Break
+                </button>
+
+                <button class="session-tab" id="longBreakTab">
+                    <i class="fa-solid fa-person-walking"></i>
+                    Long Break
+                </button>
+
+            </section>
+
+
+            <!-- Timer and Task Layout -->
+            <div class="workspace">
+
+                <!-- Timer Section will continue in Round 2 -->
+
+
+                <!-- Left Timer Section -->
+                <section class="timer-section">
+
+                    <div class="timer-wrapper">
+
+                        <!-- Circular Timer -->
+                        <div class="timer-circle" id="timerCircle">
+
+                            <svg class="progress-ring" viewBox="0 0 260 260">
+
+                                <circle class="progress-ring-bg" cx="130" cy="130" r="118">
+                                </circle>
+
+                                <circle class="progress-ring-fill" id="progressRing" cx="130" cy="130" r="118">
+                                </circle>
+
+                            </svg>
+
+                            <div class="timer-content">
+
+                                <h1 id="timerDisplay">25:00</h1>
+
+                                <p id="timerStatus">
+                                    Focus in progress
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Timer Controls -->
+                        <div class="timer-controls">
+
+                            <button class="control-btn start-btn" id="startBtn">
+
+                                <i class="fa-solid fa-play"></i>
+
+                                <span>Start</span>
+
+                            </button>
+
+
+                            <button class="control-btn reset-btn" id="resetBtn">
+
+                                <i class="fa-solid fa-rotate-left"></i>
+
+                                <span>Reset</span>
+
+                            </button>
+
+                        </div>
+
+
+                        <!-- Session Counter -->
+                        <div class="session-counter">
+
+                            <span>Completed Sessions:</span>
+
+                            <strong id="completedSessions">0</strong>
+
+                            <span>/ 4</span>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Right Task Section -->
+                <section class="task-section">
+
+                    <!-- Task Heading -->
+                    <div class="task-header">
+
+                        <h2>Focus Task</h2>
+
+                        <p>Select a task and stay focused.</p>
+
+                    </div>
+
+
+                    <!-- Task Input -->
+                    <div class="task-input-wrapper">
+
+                        <i class="fa-regular fa-circle-check"></i>
+
+                        <input type="text" id="taskInput" placeholder="Enter a task to focus on...">
+
+                        <button id="addTaskBtn" class="add-task-btn">
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- In Progress Tasks -->
+                    <div class="task-list-section">
+
+                        <div class="task-list-header">
+
+                            <h3>In Progress Tasks</h3>
+
+                            <span id="taskCount">0 Tasks</span>
+
+                        </div>
+
+
+                        <div class="task-list" id="taskList">
+
+                            <!-- Tasks will be added through JavaScript -->
+
+                            <div class="empty-task-message" id="emptyTaskMessage">
+
+                                <i class="fa-solid fa-list-check"></i>
+
+                                <p>No tasks added yet.</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Completed Tasks -->
+                    <div class="completed-task-section">
+
+                        <h3>
+                            <i class="fa-solid fa-circle-check"></i>
+                            Completed Tasks
+                        </h3>
+
+                        <div id="completedTaskList">
+
+                            <p class="empty-completed">
+                                No completed tasks yet.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </main>
+
+
+        <!-- Footer -->
+        <footer class="app-footer">
+
+            <p>
+                <i class="fa-solid fa-bolt"></i>
+                Stay Focused. Stay Productive.
+            </p>
+
+            <span>Pomodoro Productivity Timer</span>
+
+        </footer>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="one.js"></script>
+
+</body>
+
+</html>

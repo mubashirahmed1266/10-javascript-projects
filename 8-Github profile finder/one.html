@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile Finder</title>
+
+    <link rel="stylesheet" href="one.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header class="header">
+            <h1>GitHub Profile Finder</h1>
+            <p>Discover GitHub profiles in seconds.</p>
+        </header>
+
+        <!-- Search Section -->
+        <section class="search-section">
+
+            <div class="search-box">
+                <input type="text" id="usernameInput" placeholder="Enter GitHub username...">
+
+                <button id="searchBtn">
+                    Search
+                </button>
+            </div>
+
+        </section>
+
+        <!-- Profile Section -->
+        <main class="profile-section" id="profileSection">
+
+            <div class="profile-card">
+
+                <!-- Profile Header -->
+                <div class="profile-header">
+
+                    <img src="https://via.placeholder.com/120" alt="Profile Avatar" id="avatar">
+
+                    <div class="profile-info">
+                        <h2 id="name">Mubashir Ahmed</h2>
+                        <p id="username">@username</p>
+                        <p id="bio">GitHub profile bio will appear here.</p>
+                        <p id="location">📍 Location</p>
+                        <p id="company">🏢 Company</p>
+                        <p id="blog">🌐 Website</p>
+                    </div>
+
+                </div>
+
+                <!-- Profile Statistics -->
+                <div class="profile-stats">
+
+                    <div class="stat-box">
+                        <h3 id="repos">0</h3>
+                        <p>Repositories</p>
+                    </div>
+
+                    <div class="stat-box">
+                        <h3 id="followers">0</h3>
+                        <p>Followers</p>
+                    </div>
+
+                    <div class="stat-box">
+                        <h3 id="following">0</h3>
+                        <p>Following</p>
+                    </div>
+
+                </div>
+
+                <!-- GitHub Profile Button -->
+                <div class="profile-footer">
+
+                    <a href="#" id="profileLink" target="_blank">
+                        Visit GitHub Profile
+                    </a>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="one.js"></script>
+
+</body>
+
+</html>

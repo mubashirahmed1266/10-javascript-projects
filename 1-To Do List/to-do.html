@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="to-do.css">
+</head>
+
+<body>
+    <div class="app-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <h2>Dark Flow</h2>
+
+            </div>
+
+            <nav class="navigation">
+                <a href="#" class="active" data-filter="all">All Tasks</a>
+                <a href="#" data-filter="today">Today</a>
+                <a href="#" data-filter="completed">Completed</a>
+            </nav>
+
+        </aside>
+
+        <!-- Main Content -->
+
+        <main class="main-content">
+
+            <!-- Header -->
+
+            <header class="app-header">
+                <div class="header-text">
+                    <h1>My Tasks</h1>
+                    <p>Stay focused. Get things done.</p>
+
+                </div>
+
+                <div class="date">
+                    <span>Thursday, November 5</span>
+                </div>
+
+            </header>
+
+
+            <!-- Add Task Input -->
+
+            <section class="task-input">
+                <input type="text" placeholder="What needs to be done?">
+                <button class="add-btn">+</button>
+            </section>
+
+            <!-- Task List -->
+
+            <section class="task-list">
+
+                <div class="task-item">
+                    <input type="checkbox">
+                    <span>Complete JavaScript project</span>
+                    <button class="delete-btn">×</button>
+                </div>
+
+                <div class="task-item">
+                    <input type="checkbox">
+                    <span>Practice Data Structures</span>
+                    <button class="delete-btn">×</button>
+                </div>
+
+                <div class="task-item">
+                    <input type="checkbox">
+                    <span>Revise OOP concepts</span>
+                    <button class="delete-btn">×</button>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="to-do.js"></script>
+
+</body>
+
+</html>

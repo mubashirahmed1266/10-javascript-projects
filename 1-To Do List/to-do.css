@@ -1,0 +1,232 @@
+/* CSS Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+/* Body Styling */
+body {
+    background: #080808;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+/* App Container */
+.app-container {
+    display: flex;
+    min-height: 100vh;
+    padding: 20px;
+    gap: 25px;
+}
+/* Logo */
+.logo h2 {
+    font-size: 25px;
+    color: #a78bfa;
+    margin-bottom: 45px;
+}
+/* Navigation */
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+/* Navigation Links */
+.navigation a{
+    text-decoration: none;
+    color: #999999;
+    font-size: 15px;
+    padding: 12px 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+
+}
+/* Active Link */
+.navigation a.active {
+    background: rgba(139, 92, 246, 0.15);
+    color: #a78bfa;
+}
+/* Hover Effect */
+.navigation a:hover {
+    background: rgba(255, 255, 255, 0.07);
+    color: #ffffff;
+}
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 30px;
+}
+/* App Header */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+/* Header Title */
+.header-text h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+/* Header Subtitle */
+.header-text p {
+    color: #888888;
+    font-size: 14px;
+}
+/* Date */
+.date{
+    color: #999999;
+    font-size: 14px;
+}
+/* Task Input Container */
+.task-input {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    margin-bottom: 30px;
+    transition: border 0.3s ease;
+}
+
+/* Input Field */
+.task-input input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 8px;
+}
+
+/* Placeholder */
+.task-input input::placeholder {
+    color: #777777;
+}
+
+/* Add Button */
+.add-btn {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 10px;
+    background: #8b5cf6;
+    color: #ffffff;
+    font-size: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Button Hover */
+.add-btn:hover {
+    background: #7c3aed;
+    transform: scale(1.05);
+}
+/* Task List */
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Individual Task Card */
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 20px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+/* Task Hover */
+.task-item:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(139, 92, 246, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Task Checkbox */
+.task-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #8b5cf6;
+    cursor: pointer;
+}
+
+/* Task Text */
+.task-item span {
+    flex: 1;
+    color: #e5e5e5;
+    font-size: 15px;
+}
+
+/* Delete Button */
+.delete-btn {
+    background: transparent;
+    border: none;
+    color: #777777;
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Delete Hover */
+.delete-btn:hover {
+    color: #ef4444;
+    transform: scale(1.15);
+}
+/* Completed Task */
+.task-item input[type="checkbox"]:checked + span {
+    text-decoration: line-through;
+    color: #666666;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+/* Smooth Checkbox Animation */
+.task-item input[type="checkbox"] {
+    transition: transform 0.2s ease;
+}
+
+.task-item input[type="checkbox"]:checked {
+    transform: scale(1.15);
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .app-container {
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .sidebar {
+        width: 160px;
+        padding: 15px;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    .app-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .header-text h1 {
+        font-size: 26px;
+    }
+
+    .task-item {
+        padding: 14px;
+    }
+}

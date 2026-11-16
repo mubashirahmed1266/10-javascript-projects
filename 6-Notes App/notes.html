@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickNotes - Notes App</title>
+    <link rel="stylesheet" href="notes.css">
+</head>
+<body>
+
+    <div class="app-container">
+
+        <!-- Header -->
+        <header class="header">
+            <h1>QuickNotes</h1>
+            <div class="date-time">
+                <span id="current-date"></span>
+                <span id="current-time"></span>
+            </div>
+        </header>
+
+        <!-- Main Section -->
+        <main class="main-content">
+
+            <div class="top-section">
+                <div>
+                    <h2>My Notes</h2>
+                    <p>Manage your thoughts and ideas.</p>
+                </div>
+
+                <button id="add-note-btn">+ Add New Note</button>
+            </div>
+
+            <!-- Search Section -->
+<div class="search-section">
+    <input
+        type="text"
+        id="search-input"
+        placeholder="Search your notes..."
+    >
+</div>
+
+<!-- Notes Container -->
+<div class="notes-container" id="notes-container">
+
+    <!-- Notes will appear here dynamically through JavaScript -->
+
+</div>
+
+<!-- Add Note Form -->
+<div class="note-form-container" id="note-form-container">
+
+    <div class="note-form">
+
+        <h2>Add New Note</h2>
+
+        <input
+            type="text"
+            id="note-title"
+            placeholder="Enter note title..."
+        >
+
+        <textarea
+            id="note-description"
+            placeholder="Write your note here..."
+            rows="5"
+        ></textarea>
+
+        <div class="form-buttons">
+            <button id="save-note-btn">Save Note</button>
+            <button id="cancel-note-btn">Cancel</button>
+        </div>
+
+    </div>
+
+</div>
+
+        </main>
+
+    </div>
+
+    <script src="notes.js"></script>
+</body>
+</html>

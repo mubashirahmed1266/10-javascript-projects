@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Master</title>
+
+    <link rel="stylesheet" href="quiz.css">
+
+    <script src="quiz.js" defer></script>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="header">
+
+        <div class="logo">
+            <h1>Quiz <span>Master</span></h1>
+        </div>
+
+        <div class="tagline">
+            Think • Choose • Win
+        </div>
+
+        <div class="header-info">
+            <div class="date">
+                <span id="current-date">Loading...</span>
+            </div>
+
+            <div class="clock">
+                <span id="live-clock">00:00:00</span>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Main Quiz Container -->
+    <main class="quiz-container">
+
+        <section class="quiz-card">
+
+            <!-- Quiz Header -->
+            <div class="quiz-top">
+
+                <div class="question-counter">
+                    <h2>
+                        Question <span id="current-question">1</span>
+                        of <span id="total-questions">5</span>
+                    </h2>
+                </div>
+
+                <!-- Countdown Timer -->
+                <div class="timer" id="timer">
+
+                    <div class="timer-icon">
+                        ⏱
+                    </div>
+
+                    <div class="timer-info">
+                        <span>Time Remaining</span>
+                        <h2 id="countdown">05:00</h2>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Quiz Progress Bar -->
+            <div class="progress-container">
+
+                <div class="progress-info">
+                    <span>Quiz Progress</span>
+                    <span id="progress-text">0%</span>
+                </div>
+
+                <div class="progress-track">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+
+            </div>
+
+            </div>
+
+            <!-- Question Section -->
+            <div class="question-section">
+
+                <span class="question-label">QUESTION 01</span>
+
+                <h2 id="question-text">
+                    What is the capital city of Australia?
+                </h2>
+
+            </div>
+
+            <!-- Answer Options -->
+            <div class="options-container" id="options-container">
+
+                <label class="option">
+                    <input type="radio" name="answer" value="Sydney">
+                    <span class="option-letter">A</span>
+                    <span class="option-text">Sydney</span>
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="answer" value="Melbourne">
+                    <span class="option-letter">B</span>
+                    <span class="option-text">Melbourne</span>
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="answer" value="Canberra">
+                    <span class="option-letter">C</span>
+                    <span class="option-text">Canberra</span>
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="answer" value="Brisbane">
+                    <span class="option-letter">D</span>
+                    <span class="option-text">Brisbane</span>
+                </label>
+
+            </div>
+
+            <!-- Quiz Navigation -->
+            <div class="quiz-actions">
+
+                <button class="prev-btn" id="prev-btn" disabled>
+                    ← Previous
+                </button>
+
+                <button class="next-btn" id="next-btn">
+                    Next Question →
+                </button>
+
+                <button class="submit-btn" id="submit-btn">
+                    Submit Quiz
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- Question Navigation -->
+        <div class="question-navigation" id="question-navigation">
+
+            <button class="nav-item active" data-question="0">1</button>
+            <button class="nav-item" data-question="1">2</button>
+            <button class="nav-item" data-question="2">3</button>
+            <button class="nav-item" data-question="3">4</button>
+            <button class="nav-item" data-question="4">5</button>
+
+        </div>
+
+    </main>
+
+    <!-- Quiz Results -->
+    <section class="results-container" id="results-container">
+
+        <div class="result-card">
+
+            <h2>Quiz Completed!</h2>
+
+            <p>Your Final Score</p>
+
+            <h1 id="final-score">0/5</h1>
+
+            <div class="result-details">
+                <p>Percentage: <span id="percentage">0%</span></p>
+                <p>Correct: <span id="correct-answers">0</span></p>
+                <p>Incorrect: <span id="incorrect-answers">0</span></p>
+                <p>Time Taken: <span id="time-taken">00:00</span></p>
+            </div>
+
+            <button id="play-again-btn">Play Again ↻</button>
+
+        </div>
+
+    </section>
+</body>
+
+</html>

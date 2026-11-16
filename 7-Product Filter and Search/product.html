@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopZone | Online Shopping</title>
+
+    <link rel="stylesheet" href="product.css">
+
+    <script src="product.js" defer></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">ShopZone.</h1>
+
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+
+            <div class="cart">
+                🛒 <span id="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Find Your Perfect Product</h1>
+
+            <p>
+                Discover the latest gadgets and accessories
+                at amazing prices.
+            </p>
+
+            <a href="#products" class="shop-btn">
+                Explore Products
+            </a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <main id="products" class="products-section">
+
+        <div class="section-heading">
+            <h2>Our Products</h2>
+            <p>Find exactly what you're looking for.</p>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input
+                type="text"
+                id="search-input"
+                placeholder="Search products..."
+            >
+        </div>
+
+        <!-- Category Filters -->
+        <div class="category-filters">
+
+            <button class="category-btn active" data-category="all">
+                All
+            </button>
+
+            <button class="category-btn" data-category="iphone">
+                iPhone
+            </button>
+
+            <button class="category-btn" data-category="samsung">
+                Samsung
+            </button>
+
+            <button class="category-btn" data-category="hp">
+                HP Laptops
+            </button>
+
+            <button class="category-btn" data-category="dell">
+                Dell Laptops
+            </button>
+
+            <button class="category-btn" data-category="headphones">
+                Headphones
+            </button>
+
+            <button class="category-btn" data-category="watches">
+                Smart Watches
+            </button>
+
+        </div>
+
+        <!-- Price Filter & Sorting -->
+        <div class="filter-container">
+
+            <div class="price-filter">
+                <input
+                    type="number"
+                    id="min-price"
+                    placeholder="Min Price"
+                >
+
+                <input
+                    type="number"
+                    id="max-price"
+                    placeholder="Max Price"
+                >
+
+                <button id="price-filter-btn">
+                    Apply Filter
+                </button>
+            </div>
+
+            <select id="sort-products">
+                <option value="default">Sort By</option>
+                <option value="low-high">Price: Low to High</option>
+                <option value="high-low">Price: High to Low</option>
+            </select>
+
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid" id="products-grid">
+
+        </div>
+
+        <!-- No Products Found -->
+        <div id="no-products" class="no-products">
+            <h3>No Products Found!</h3>
+            <p>Try searching for something else.</p>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="about">
+        <h2>ShopZone.</h2>
+        <p>Your destination for smart shopping.</p>
+        <p>&copy; 2026 ShopZone. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

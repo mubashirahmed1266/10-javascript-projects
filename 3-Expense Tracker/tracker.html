@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+
+    <link rel="stylesheet" href="tracker.css">
+    <script src="tracker.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Header -->
+        <header class="header">
+            <h1>Expense Tracker</h1>
+            <p>Manage your money smartly!</p>
+        </header>
+
+        <!-- Balance Section -->
+        <section class="balance-card">
+            <h3>Total Balance</h3>
+            <h1 id="total-balance">$0.00</h1>
+        </section>
+
+        <!-- Income and Expense Cards -->
+        <section class="summary">
+
+            <div class="card income-card">
+                <h3>Total Income</h3>
+                <h2 id="total-income">$0.00</h2>
+            </div>
+
+            <div class="card expense-card">
+                <h3>Total Expenses</h3>
+                <h2 id="total-expense">$0.00</h2>
+            </div>
+
+        </section>
+
+        <!-- Add Transaction Form -->
+        <section class="transaction-form">
+
+            <h2>Add New Transaction</h2>
+
+            <form id="expense-form">
+
+                <input type="text" id="description" placeholder="Enter description" required>
+
+                <input type="number" id="amount" placeholder="Enter amount" min="0.01" step="0.01" required>
+
+                <select id="category" required>
+                    <option value="">Select Category</option>
+                    <option value="Food">Food</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Transport">Transport</option>
+                    <option value="Bills">Bills</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <select id="type" required>
+                    <option value="expense">Expense</option>
+                    <option value="income">Income</option>
+                </select>
+
+                <input type="date" id="date" required>
+
+                <button type="submit">Add Transaction</button>
+
+            </form>
+
+        </section>
+
+        <!-- Transaction History -->
+        <section class="history">
+
+            <h2>Transaction History</h2>
+
+            <ul id="transaction-list">
+                <!-- Transactions will appear here -->
+            </ul>
+
+        </section>
+
+    </div>
+
+</body>
+
+</html>
